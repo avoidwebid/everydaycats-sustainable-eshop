@@ -83,7 +83,7 @@ Vos prérequis :
 ## Clone du projet en local
 Ouvrez votre bash préféré.
 ```bash
-git clone https://github.com/avoidwebid/nextbeer-sustainable-eshop.git
+git clone https://github.com/avoidwebid/everydaycats-sustainable-eshop.git
 ```
 
 ## Installation
