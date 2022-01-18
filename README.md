@@ -29,14 +29,14 @@ Il s'agit d'un atelier vous permettant de rapidement capter de l'information sur
 ## Faites votre choix en solo (1'')
 Expliquez-nous votre choix et constituer les équipes
 
-## Recherche en solo (10'')
+## Recherche en solo (15'')
 C'est parti pour 5 minutes de recherche sur le sujet. 
 Pensez à prendre des notes.
 
-## Combinez vos recherches (10'')
+## Combinez vos recherches (15'')
 Discutez-en avec les autres participants ayant choisi le même sujet que vous.
 
-## Retour en exploration (10'')
+## Retour en exploration (15'')
 Cette fois en équipe, synthétisez vos découvertes de manière a pouvoir les présenter au groupe.
 
 ## Restitution
@@ -50,6 +50,9 @@ Ouvrez le navigateur chrome et ouvrez les devtools.
 Dans l'onglet `Lighthouse` vous trouverez un outil vous proposant un certain nombre d'indicateurs.
 Lancez une analyse sur le site choisi et notez 3 points à améliorer.
 
+## Fruggr
+## Scaphandre
+https://github.com/hubblo-org/scaphandre/
 
 # 🦯 Introduction à l'accessibilité
 
