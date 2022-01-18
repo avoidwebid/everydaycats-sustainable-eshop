@@ -4,6 +4,16 @@ import VariantSelector from '../productAssets/VariantSelector';
 import { animateScroll as scroll } from 'react-scroll';
 import { connect } from 'react-redux';
 import { addToCart } from '../../store/actions/cartActions';
+import {
+  FacebookShareCount,
+  FacebookIcon,
+  FacebookShareButton,
+  PinterestIcon,
+  PinterestShareButton,
+  PinterestShareCount,
+  WhatsappShareButton,
+  WhatsappIcon
+} from 'react-share';
 
 class ProductDetail extends Component {
   constructor(props) {
@@ -125,6 +135,7 @@ class ProductDetail extends Component {
     const priceSymbol = this.getCurrencySymbol(price.formatted_with_symbol);
     const { selectedOptions } = this.state;
     const reg = /(<([^>]+)>)/ig;
+    const shareUrl = window.location.href;
 
     return (
       <div>
@@ -135,6 +146,17 @@ class ProductDetail extends Component {
         <p className="font-size-display3 font-family-secondary mt-2 mb-2">
           {name}
         </p>
+        <FacebookShareButton url={shareUrl}>
+          <FacebookIcon size={24} />
+          <FacebookShareCount url={shareUrl} />
+        </FacebookShareButton>
+        <WhatsappShareButton url={shareUrl}>
+          <WhatsappIcon size={24} />
+        </WhatsappShareButton>
+        <PinterestShareButton url={shareUrl}>
+          <PinterestIcon size={24} />
+          <PinterestShareCount url={shareUrl} />
+        </PinterestShareButton>
         <div className="mb-4 pb-3 font-size-subheader">{(description || '').replace(reg, '')}</div>
 
         {/* Product Variant */}
@@ -149,7 +171,7 @@ class ProductDetail extends Component {
 
         {/* Add to Cart & Price */}
         <div className="d-flex py-4">
-          <button onClick={this.handleAddToCart} disabled={soldOut}
+          <div onClick={this.handleAddToCart} disabled={soldOut}
               className="h-56 bg-black font-color-white pl-3 pr-4 d-flex align-items-center flex-grow-1" type="button">
             <span className="flex-grow-1 mr-3 text-center">
               { soldOut ? 'Sold out' : 'Add to cart' }
@@ -157,7 +179,7 @@ class ProductDetail extends Component {
             <span className="border-left border-color-white pl-3">
             {priceSymbol}{this.getPrice()}
             </span>
-          </button>
+          </div>
         </div>
       </div>
     );

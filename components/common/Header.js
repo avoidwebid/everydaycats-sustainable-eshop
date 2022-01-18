@@ -150,13 +150,13 @@ class Header extends Component {
               My account
             </a>
           </Link>
-          <button
+          <div
             className="bg-transparent mr-2 font-color-black font-weight-semibold"
             type="button"
             onClick={this.handleLogout}
           >
             Logout
-          </button>
+          </div>
         </div>
       );
     }
@@ -196,15 +196,10 @@ class Header extends Component {
               src={`/icon/${showMobileMenu ? 'cross' : 'menu'}.svg`}
               onClick={this.toggleMobileMenu}
               className="w-32 mr-1 d-block d-sm-none"
-              alt="Menu icon"
             />
             <Link href="/">
-              <a>
-                <img
-                  src="/images/commerce.svg"
-                  className="logo cursor-pointer"
-                  alt="Logo"
-                />
+              <a className='logo'>
+                Everyday Cats
               </a>
             </Link>
           </div>

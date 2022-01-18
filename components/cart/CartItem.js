@@ -36,10 +36,10 @@ class CartItem extends Component {
           />}
           <div className="flex-grow-1 borderbottom border-color-gray400 h-100">
             <div className="d-flex justify-content-between mb-2">
-              <p>{item.name}</p>
-              <p className="text-right font-weight-medium">
+              <div>{item.name}</div>
+              <div className="text-right font-weight-medium">
                 {item.line_total.formatted_with_symbol}
-              </p>
+              </div>
             </div>
             <div className="d-flex justify-content-between mb-2">
               {item.selected_options.map((option, i) =>
@@ -50,17 +50,17 @@ class CartItem extends Component {
             </div>
             <div className="d-flex align-items-center justify-content-between pt-2 pb-4">
               <div className="d-flex align-items-center">
-                <button className="p-0 bg-transparent" onClick={() => item.quantity > 1 ? this.handleUpdateCartItem(item.id, item.quantity -1) : this.handleRemoveFromCart(item.id)}>
-                  <img src="/icon/minus.svg" className="w-16" title="Minus icon" alt="" />
-                </button>
+                <div className="p-0 bg-transparent" onClick={() => item.quantity > 1 ? this.handleUpdateCartItem(item.id, item.quantity -1) : this.handleRemoveFromCart(item.id)}>
+                  <img src="/icon/minus.svg" className="w-16" title="Minus icon" />
+                </div>
                 <p className="text-center px-3">{item.quantity}</p>
-                <button className="p-0 bg-transparent" onClick={() => this.handleUpdateCartItem(item.id, item.quantity +1)} >
-                  <img src="/icon/plus.svg" className="w-16" title="Plus icon" alt=""/>
-                </button>
+                <div className="p-0 bg-transparent" onClick={() => this.handleUpdateCartItem(item.id, item.quantity +1)} >
+                  <img src="/icon/plus.svg" className="w-16" title="Plus icon"/>
+                </div>
               </div>
-              <p className="text-right text-decoration-underline font-color-medium cursor-pointer" onClick={() => this.handleRemoveFromCart(item.id)}>
+              <div className="text-right text-decoration-underline font-color-medium cursor-pointer" onClick={() => this.handleRemoveFromCart(item.id)}>
                 Remove
-              </p>
+              </div>
             </div>
           </div>
         </div>

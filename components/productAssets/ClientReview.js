@@ -81,7 +81,6 @@ export default class ClientReview extends Component {
               src="/icon/cross.svg"
               className="w-24 cursor-pointer"
               onClick={this.handleClose}
-              alt="Cross icon"
             />
           </div>
           <ReviewList reviews={reviews} />
@@ -94,13 +93,13 @@ export default class ClientReview extends Component {
               </p>
             </div>
             <ReviewList reviews={reviews}>
-              <button
+              <div
                 type="button"
                 onClick={this.handleOpen}
                 className="text-center bg-transparent w-100 h-72 px-3 text-decoration-underline"
               >
                 View all reviews
-              </button>
+              </div>
             </ReviewList>
           </div>
         </div>

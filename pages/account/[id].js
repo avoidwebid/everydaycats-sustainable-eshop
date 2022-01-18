@@ -79,7 +79,7 @@ export default function SingleOrderPage() {
     }
 
     return (
-      <img className="img-thumbnail h-72 mr-4" alt={data.product_name} src={data.media.source} />
+      <img className="img-thumbnail h-72 mr-4" src={data.media.source} />
     )
   };
 
@@ -185,7 +185,7 @@ export default function SingleOrderPage() {
                       Account
                     </a>
                   </Link>
-                  <img src="/icon/arrow-right.svg" className="w-16 mx-1" alt="Arrow icon"/>
+                  <img src="/icon/arrow-right.svg" className="w-16 mx-1"/>
                   <div className="font-size-caption font-weight-bold cursor-pointer">
                   { data.customer_reference }
                   </div>

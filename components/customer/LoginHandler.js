@@ -146,13 +146,13 @@ class LoginHandler extends Component {
             required
           />
         </label>
-        <button
+        <div
           className="bg-black font-color-white w-100 border-none h-56 font-weight-semibold"
           type="submit"
           onClick={this.loginCustomer}
         >
           Get magic link
-        </button>
+        </div>
       </form>
     );
   }

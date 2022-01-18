@@ -93,12 +93,12 @@ class Cart extends Component {
                   <p className="font-family-secondary font-size-subheader">
                     Shopping Cart
                   </p>
-                  <button
+                  <div
                     className="bg-transparent p-0"
                     onClick={() => toggle(false)}
                   >
-                    <img src="/icon/cross.svg" title="Times icon" alt="" />
-                  </button>
+                    <img src="/icon/cross.svg" title="Times icon" />
+                  </div>
                 </div>
               </div>
               {cart.total_unique_items > 0 ? (
@@ -117,10 +117,10 @@ class Cart extends Component {
                   {/* Cart Footer */}
                   <div className="cart-footer">
                     <div className="mb-3 d-flex">
-                      <p className="font-color-light mr-2 font-weight-regular">
+                      <div className="font-color-light mr-2 font-weight-regular">
                         Subtotal:
-                      </p>
-                      <p>{cart.subtotal.formatted_with_symbol}</p>
+                      </div>
+                      <div>{cart.subtotal.formatted_with_symbol}</div>
                     </div>
                     <div className="row">
                       <div className="col-6 d-none d-md-block">
@@ -143,7 +143,7 @@ class Cart extends Component {
               ) : (
                 <div className="d-flex align-items-center justify-content-center bg-brand300 flex-grow-1 p-4 p-md-5 flex-column">
                   <div className="position-relative cursor-pointer mb-3">
-                    <img src="/icon/cart.svg" title="Cart icon" alt="" className="w-32" />
+                    <img src="/icon/cart.svg" title="Cart icon" className="w-32" />
                     <div
                       className="position-absolute font-size-tiny font-weight-bold"
                       style={{ right: '-4px', top: '-4px' }}

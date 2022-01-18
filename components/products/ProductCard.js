@@ -1,7 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
+import {
+  FacebookShareCount,
+  FacebookIcon,
+  FacebookShareButton,
+  PinterestIcon,
+  PinterestShareButton,
+  PinterestShareCount,
+  WhatsappShareButton,
+  WhatsappIcon
+} from 'react-share';
 
 export default function ProductCard({ permalink, image, name, description, price, soldOut}) {
+  const shareUrl = window.location.href;
   return (
     <Link href="/product/[permalink]" as={`/product/${permalink}`}>
       <a className="mb-5 d-block font-color-black cursor-pointer">
@@ -14,6 +25,17 @@ export default function ProductCard({ permalink, image, name, description, price
         >
           {soldOut && <div className="product-card--overlay-text">SOLD OUT</div>}
         </div>
+        <FacebookShareButton url={shareUrl}>
+          <FacebookIcon size={24} />
+          <FacebookShareCount url={shareUrl} />
+        </FacebookShareButton>
+        <WhatsappShareButton url={shareUrl}>
+          <WhatsappIcon size={24} />
+        </WhatsappShareButton>
+        <PinterestShareButton url={shareUrl}>
+          <PinterestIcon size={24} />
+          <PinterestShareCount url={shareUrl} />
+        </PinterestShareButton>
         <p className="font-size-subheader mb-2 font-weight-medium">
           {name}
         </p>

@@ -22,6 +22,10 @@ $color: rgba(0, 0, 0, 0);
     text-shadow: 2px 2px 3px rgba(33, 33, 33, 0.5);
   }
 
+  .hero-header .logo {
+    filter: invert(1);
+  }
+
   .hero-subheader {
     text-shadow: 2px 2px 3px rgba(33, 33, 33, 0.5);
   }
@@ -52,4 +56,8 @@ $color: rgba(0, 0, 0, 0);
     box-shadow: 0 -125px 0 2px $color, -125px 0px 0 2px $color,
       0px 125px 0 2px $color, 120px 40px 0 2px $color, 0 0 0 2px #fff;
   }
+}
+
+.leaflet-container {
+  height: 100vh;
 }

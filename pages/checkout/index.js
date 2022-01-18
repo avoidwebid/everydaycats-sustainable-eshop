@@ -555,7 +555,7 @@ class CheckoutPage extends Component {
                     Cart
                   </a>
                 </Link>
-                <img src="/icon/arrow-right.svg" className="w-16 mx-1" alt="Arrow icon"/>
+                <img src="/icon/arrow-right.svg" className="w-16 mx-1"/>
                 <div className="font-size-caption font-weight-bold cursor-pointer">
                   Checkout
                 </div>
@@ -720,13 +720,13 @@ class CheckoutPage extends Component {
                     <p className="checkout-error">
                       { !selectedShippingOption ? 'Select a shipping option!' : '' }
                     </p>
-                    <button
+                    <div
                       type="submit"
                       className="bg-black font-color-white w-100 border-none h-56 font-weight-semibold d-lg-block"
                       disabled={!selectedShippingOption}
                     >
                       Make payment
-                    </button>
+                    </div>
                   </form>
                 )
               }
@@ -745,7 +745,7 @@ class CheckoutPage extends Component {
                         className="d-flex mb-2"
                       >
                         { (item && item.media)
-                          && (<img className="checkout__line-item-image mr-2" src={item.media.source} alt={item.product_name}/>)
+                          && (<img className="checkout__line-item-image mr-2" src={item.media.source}/>)
                         }
                         <div className="d-flex flex-grow-1">
                           <div className="flex-grow-1">
@@ -777,13 +777,13 @@ class CheckoutPage extends Component {
                     placeholder="Gift card or discount code"
                     className="mr-2 col"
                   />
-                  <button
+                  <div
                     className="font-color-white border-none font-weight-medium px-4 col-auto"
                     disabled={!this.props.checkout || undefined}
                     onClick={this.handleDiscountChange}
                   >
                     Apply
-                  </button>
+                  </div>
                 </div>
                 <div className="py-3 borderbottom border-color-black">
                   {[

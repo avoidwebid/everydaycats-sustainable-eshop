@@ -32,13 +32,13 @@ class Confirm extends Component {
     }
 
     return (
-      <button
+      <div
         onClick={this.handlePrint}
         className="d-flex align-items-center text-decoration-underline cursor-pointer mt-3 mt-sm-0 no-print bg-transparent"
       >
-        <img src="/icon/print.svg" className="mr-2 w-20 no-print" alt=""/>
+        <img src="/icon/print.svg" className="mr-2 w-20 no-print"/>
         <div className="no-print">Print receipt</div>
-      </button>
+      </div>
     );
   }
 
@@ -48,10 +48,10 @@ class Confirm extends Component {
     return (
       <div className="py-3">
         <div className="d-flex justify-content-between align-items-center mb-2">
-          <p>Subtotal</p>
-          <p className="text-right font-weight-medium">
+          <div>Subtotal</div>
+          <div className="text-right font-weight-medium">
             ${orderReceipt.order.subtotal.formatted_with_code}
-          </p>
+          </div>
         </div>
       </div>
     );
@@ -66,7 +66,7 @@ class Confirm extends Component {
     return (
       <div className="pb-3">
         <div className="d-flex justify-content-between align-items-center mb-2">
-          <p>Shipping</p>
+          <div>Shipping</div>
           <p className="text-right font-weight-medium">
             ${orderReceipt.order.shipping.price.formatted_with_code}
           </p>
@@ -105,7 +105,7 @@ class Confirm extends Component {
             <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0">
               <div className="h-100 d-flex flex-column align-items-center justify-content-center py-5 px-4 px-sm-5">
                 <div className="bg-success700 h-64 w-64 d-flex rounded-circle align-items-center justify-content-center mb-4">
-                  <img src="/icon/check.svg" className="w-40" alt="" />
+                  <img src="/icon/check.svg" className="w-40" />
                 </div>
                 <h3 className="text-center font-family-secondary mb-3">
                   Thank you for your purchase!

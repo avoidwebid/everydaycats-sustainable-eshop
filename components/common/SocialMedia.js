@@ -3,23 +3,23 @@ import Link from 'next/link';
 
 const imagesInfo = [
   {
-    image: '/images/insta/1.png',
+    image: '/images/insta/1.jpeg',
     translateRatio: -50
   },
   {
-    image: '/images/insta/2.jpg',
+    image: '/images/insta/2.jpeg',
     translateRatio: 30
   },
   {
-    image: '/images/insta/3.jpg',
+    image: '/images/insta/3.jpeg',
     translateRatio: 0
   },
   {
-    image: '/images/insta/4.jpg',
+    image: '/images/insta/4.jpeg',
     translateRatio: -20
   },
   {
-    image: '/images/insta/5.jpg',
+    image: '/images/insta/5.jpeg',
     translateRatio: -80
   }
 ];
@@ -85,7 +85,7 @@ export default class SocialMedia extends React.Component {
                 <Link href="/about">
                   <a className="d-flex py-3 align-items-center font-color-black borderbottom border-color-black">
                     <p className="mr-3">Follow us</p>
-                    <img src="/icon/arrow-long-right.svg" alt="Arrow icon"/>
+                    <img src="/icon/arrow-long-right.svg"/>
                   </a>
                 </Link>
               </div>
