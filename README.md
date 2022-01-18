@@ -101,3 +101,15 @@ Il vous faudra ensuite renseigner le document .env avec les informations que je 
 ```bash
 npm run dev
 ```
+
+## 🔀 Random Cat page 
+
+Ajouter une page sur laquelle vous exploiterez l'API "cat as a service" pour afficher un chat de manière aléatoire.
+
+sources utiles :
+- API Cat as a service https://thecatapi.com/
+- [Comment créer une route d'API avec nextjs ? ](https://nextjs.org/docs/api-routes/introduction)
+- https://nextjs.org/docs/api-reference/next/image
+- [useEffect react pour l'appel à une route d'API](https://fr.reactjs.org/docs/faq-ajax.html)
+
+Utilisez ensuite le composant d'image de nextjs pour gérer automatiquement la qualité des images.
