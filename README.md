@@ -27,6 +27,7 @@ Il s'agit d'un atelier vous permettant de rapidement capter de l'information sur
 
 ## Faites votre choix en solo (1'')
 Expliquez-nous votre choix et constituer les équipes
+
 ## Recherche en solo (5'')
 C'est parti pour 5 minutes de recherche sur le sujet. 
 Pensez à prendre des notes.
@@ -34,7 +35,7 @@ Pensez à prendre des notes.
 ## Combinez vos recherches (5'')
 Discutez-en avec les autres participants ayant choisi le même sujet que vous.
 
-## Retour en exploration (15'')
+## Retour en exploration (10'')
 Cette fois en équipe, synthétisez vos découvertes de manière a pouvoir les présenter au groupe.
 
 ## Restitution
@@ -48,13 +49,11 @@ Ouvrez le navigateur chrome et ouvrez les devtools.
 Dans l'onglet `Lighthouse` vous trouverez un outil vous proposant un certain nombre d'indicateurs.
 Lancez une analyse sur le site choisi et notez 3 points à améliorer.
 
-## Fruggr
-## Scaphandre
-https://github.com/hubblo-org/scaphandre/
 ## Ecoindex
 - [Extension Chrome](https://chrome.google.com/webstore/detail/greenit-analysis/mofbfhffeklkbebfclfaiifefjflcpad)
 - [Extension Firefox](https://addons.mozilla.org/fr/firefox/addon/greenit-analysis/)
 ## Bundle Phobia
+
 Le site [Bundle Phobia](https://bundlephobia.com/) vous permet d'avoir des informations sur vos dépendances npm et d'obtenir des alternatives.
 
 # 🦯 Introduction à l'accessibilité
@@ -109,6 +108,7 @@ cp .env.example .env
 ```bash
 npm run dev
 ```
+
 ## Exercice
 
 - Naviguez au clavier dans ce site de e-commerce et analysez les premiers problème de contenus et d'accessibilité.
@@ -118,9 +118,9 @@ npm run dev
 - Ajouter des attributs `alt` aux images existantes ou bien `aria-hidden=true`
 - Réduire la qualité des images grace au composant `Image` de nextjs
 
-### Gestion des liens / boutons
+### Gestion des liens / bouttons
 - Transformer les boutons actuellement à base de balises `<div>` en `button` avec une accessibilité convenable
-- Modifier le bouton de panier pour donner des informations sur la contenance (nombre d'articles).
+- Modifier le bouton de panier pour d onner des informations sur la contenance (nombre d'articles).
 
 ### Gestion des dépendances
 
@@ -129,16 +129,4 @@ npm run dev
 
 ### Formulaire d'achat accessible
 
-- Améliorer l'accessibilité du formulaire d'achat `checkout`
-
-### 🔀 Bonus: Random Cat page 
-
-Ajouter une page sur laquelle vous exploiterez l'API "cat as a service" pour afficher un chat de manière aléatoire.
-
-sources utiles :
-- API Cat as a service https://thecatapi.com/
-- [Comment créer une route d'API avec nextjs ? ](https://nextjs.org/docs/api-routes/introduction)
-- https://nextjs.org/docs/api-reference/next/image
-- [useEffect react pour l'appel à une route d'API](https://fr.reactjs.org/docs/faq-ajax.html)
-
-Utilisez ensuite le composant d'image de nextjs pour gérer automatiquement la qualité des images.
+- Améliorer l'accessibilité du formulaire d'achat `AddressForm.js`
