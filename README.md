@@ -24,16 +24,14 @@ Il s'agit d'un atelier vous permettant de rapidement capter de l'information sur
 - Vous avez dit `JAMStack` ? C'est quoi ?
 - `GraphQL` qu'est ce que c'est ? Et par rapport aux API `REST` ?
 - C'est quoi la `Low Tech Web` ?
-- C'est quoi `Lighthouse` ?
 
 ## Faites votre choix en solo (1'')
 Expliquez-nous votre choix et constituer les équipes
-
-## Recherche en solo (15'')
+## Recherche en solo (5'')
 C'est parti pour 5 minutes de recherche sur le sujet. 
 Pensez à prendre des notes.
 
-## Combinez vos recherches (15'')
+## Combinez vos recherches (5'')
 Discutez-en avec les autres participants ayant choisi le même sujet que vous.
 
 ## Retour en exploration (15'')
@@ -53,6 +51,11 @@ Lancez une analyse sur le site choisi et notez 3 points à améliorer.
 ## Fruggr
 ## Scaphandre
 https://github.com/hubblo-org/scaphandre/
+## Ecoindex
+- [Extension Chrome](https://chrome.google.com/webstore/detail/greenit-analysis/mofbfhffeklkbebfclfaiifefjflcpad)
+- [Extension Firefox](https://addons.mozilla.org/fr/firefox/addon/greenit-analysis/)
+## Bundle Phobia
+Le site [Bundle Phobia](https://bundlephobia.com/) vous permet d'avoir des informations sur vos dépendances npm et d'obtenir des alternatives.
 
 # 🦯 Introduction à l'accessibilité
 
@@ -60,11 +63,6 @@ https://github.com/hubblo-org/scaphandre/
 
 NVDA est une liseuse d'écran très utilisée qui permet aux aveugles et déficients visuels de pouvoir dicter l'écran en cours de lecture.
 Téléchargez cette liseuse et installez la (pensez à utiliser votre casque 😄 )
-
-## Quelques éléments pour la suite du TP
-- Pensez aux contrastes : il faut toujours un contraste suffisant entre la couleur de fond et les textes ou images.
-- Il est important de pouvoir naviguer au clavier sur un site web : utilisation de `button` et par exemple de `tabindex`
-- Les liens doivent toujours expliquer vers quoi ils dirigent.
 ## Exercice simple
 
 Les articles disponibles sur le site [Developer Mozilla : Accessibilité](https://developer.mozilla.org/fr/docs/Learn/Accessibility) sont excellents pour commencer.
@@ -76,20 +74,29 @@ Les articles disponibles sur le site [Developer Mozilla : Accessibilité](https:
 ](https://developer.mozilla.org/fr/docs/Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility#accessibilit%C3%A9_en_css_-_exercice_1)
 
 Mettez en application ces principes sur le projet d'étude.
+
+## A retenir pour la suite du TP
+- Les images doivent toujours avoir l'attribut `alt` ou être cachée lors d'une lecture par une liseuse d'écran avec l'attribut `aria-hidden=true`
+- Les contrastes entre background et couleur de texte doivent toujours être suffisants.
+- Un outline est nécessaire pour une lecture guidée, il ne faut pas le cacher.
+- Les liens doivent être compréhensibles et perceptibles. Penser à ajouter un attribut `title` ou à labelliser leur utilité à l'aide de l'attribut `aria-labelledby`
+- On doit pouvoir naviguer entre les différents champs d'un formulaire avec une information sur le contenu et le format attendu.
 # 🧑🏽‍💻 Projet d'étude
+
 ## Installation
+### Environnement de travail
 Vos prérequis :
 - IDE ou code editor de votre choix (vscode par exemple)
 - Node (v8.2.0 ou plus récent)
 - NPM (inclus dans l'installer nodejs) ou Yarn
 
-## Clone du projet en local
+### Clone du projet en local
 Ouvrez votre bash préféré.
 ```bash
 git clone https://github.com/avoidwebid/everydaycats-sustainable-eshop.git
 ```
 
-## Installation
+### Installation
 Ouvrez votre bash préféré.
 
 ```bash
@@ -97,15 +104,34 @@ npm install
 cp .env.example .env
 ```
 
-Il vous faudra ensuite renseigner le document .env avec les informations que je vous aurai transmises.
-
-## Démarrage du projet
+### Démarrage du projet
 
 ```bash
 npm run dev
 ```
+## Exercice
 
-## 🔀 Random Cat page 
+- Naviguez au clavier dans ce site de e-commerce et analysez les premiers problème de contenus et d'accessibilité.
+- Utiliser lighthouse pour avoir de premières mesures.
+
+### Gestion des images
+- Ajouter des attributs `alt` aux images existantes ou bien `aria-hidden=true`
+- Réduire la qualité des images grace au composant `Image` de nextjs
+
+### Gestion des liens / boutons
+- Transformer les boutons actuellement à base de balises `<div>` en `button` avec une accessibilité convenable
+- Modifier le bouton de panier pour donner des informations sur la contenance (nombre d'articles).
+
+### Gestion des dépendances
+
+- analyser les différentes dépendances présentes dans la `package.json` du projet, les passer à bundle phobia : `leaflet` `react-leaflet`...
+- Remplacer / supprimer la cartographie présente ne bas de la page d'accueil.
+
+### Formulaire d'achat accessible
+
+- Améliorer l'accessibilité du formulaire d'achat `checkout`
+
+### 🔀 Bonus: Random Cat page 
 
 Ajouter une page sur laquelle vous exploiterez l'API "cat as a service" pour afficher un chat de manière aléatoire.
 
